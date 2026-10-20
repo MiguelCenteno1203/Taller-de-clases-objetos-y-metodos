@@ -51,7 +51,13 @@ public class PruebaPerfilMedico {
                 perfil.calcularFrecuenciaEsperadaMinima(), perfil.calcularFrecuenciaEsperadaMaxima());
         System.out.printf("Índice de Masa Corporal (BMI): %.2f%n", perfil.calcularBMI());
         System.out.println("----------------------------------------------");
-
+        // Tabla de referencia solicitada por la consigna
+        System.out.println("\nVALORES DE BMI DE REFERENCIA:");
+        System.out.println("Bajo peso:  menos de 18.5");
+        System.out.println("Normal:     entre 18.5 y 24.9");
+        System.out.println("Sobrepeso:  entre 25 y 29.9");
+        System.out.println("Obeso:      30 o más");
+        System.out.println("==============================================");
         entrada.close();
     }
 }
