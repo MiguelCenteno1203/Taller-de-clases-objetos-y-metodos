@@ -1,4 +1,5 @@
 
+
 package factura;
 
 public class Factura {
@@ -7,7 +8,10 @@ public class Factura {
     private int cantidad;
     private double precioPorArticulo;
 
-    public Factura(String numeroPieza, String descripcionPieza, int cantidad, double precioPorArticulo) {
+    // Constructor
+    public Factura(String numeroPieza, String descripcionPieza,
+                   int cantidad, double precioPorArticulo) {
+
         this.numeroPieza = numeroPieza;
         this.descripcionPieza = descripcionPieza;
 
@@ -24,7 +28,7 @@ public class Factura {
         }
     }
 
-    // Métodos getter y setter
+    // Métodos setter y getter
     public void establecerNumeroPieza(String numeroPieza) {
         this.numeroPieza = numeroPieza;
     }
@@ -65,7 +69,7 @@ public class Factura {
         return precioPorArticulo;
     }
 
-    // Calcula el monto total de la factura
+    // Calcular el monto total de la factura
     public double obtenerMontoFactura() {
         return cantidad * precioPorArticulo;
     }
