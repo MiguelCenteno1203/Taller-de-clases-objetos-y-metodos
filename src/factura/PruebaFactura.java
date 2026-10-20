@@ -1,5 +1,6 @@
 
 
+
 package factura;
 
 import java.util.Scanner;
@@ -39,6 +40,7 @@ public class PruebaFactura {
         System.out.println("Cantidad: "
                 + factura1.obtenerCantidad());
 
+        // Precios con dos decimales
         System.out.printf("Precio por artículo: $%.2f%n",
                 factura1.obtenerPrecioPorArticulo());
 
@@ -55,6 +57,7 @@ public class PruebaFactura {
         System.out.println("Cantidad configurada con -5: "
                 + facturaInvalida.obtenerCantidad());
 
+        // Mostrar precios con dos decimales
         System.out.printf("Precio configurado con -2.50: $%.2f%n",
                 facturaInvalida.obtenerPrecioPorArticulo());
 
