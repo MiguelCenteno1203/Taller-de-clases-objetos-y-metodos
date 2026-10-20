@@ -1,5 +1,5 @@
 package factura;
-
+//
 public class Factura {
     private String numeroPieza;
     private String descripcionPieza;
