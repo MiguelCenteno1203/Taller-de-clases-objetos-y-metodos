@@ -111,4 +111,9 @@ public class PerfilMedico {
     public double calcularFrecuenciaEsperadaMaxima() {
         return calcularFrecuenciaMaxima() * 0.85;
     }
+    // Calcula el índice de masa corporal convirtiendo cm a metros
+    public double calcularBMI() {
+        double alturaMetros = alturaCm / 100.0;
+        return pesoKg / (alturaMetros * alturaMetros);
+    }
 }
