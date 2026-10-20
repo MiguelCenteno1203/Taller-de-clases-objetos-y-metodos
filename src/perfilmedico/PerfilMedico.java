@@ -1,5 +1,8 @@
 package perfilmedico;
 
+import java.time.LocalDate;
+import java.time.Period;
+
 public class PerfilMedico {
     private String primerNombre;
     private String apellido;
@@ -86,5 +89,26 @@ public class PerfilMedico {
 
     public double obtenerPesoKg() {
         return pesoKg;
+    }
+    // Calcula la edad exacta en años
+    public int calcularEdad() {
+        LocalDate fechaNac = LocalDate.of(anioNacimiento, mesNacimiento, diaNacimiento);
+        LocalDate fechaActual = LocalDate.now();
+        return Period.between(fechaNac, fechaActual).getYears();
+    }
+
+    // Frecuencia cardiaca máxima: 220 - edad
+    public int calcularFrecuenciaMaxima() {
+        return 220 - calcularEdad();
+    }
+
+    // Frecuencia esperada mínima: 50%
+    public double calcularFrecuenciaEsperadaMinima() {
+        return calcularFrecuenciaMaxima() * 0.50;
+    }
+
+    // Frecuencia esperada máxima: 85%
+    public double calcularFrecuenciaEsperadaMaxima() {
+        return calcularFrecuenciaMaxima() * 0.85;
     }
 }
