@@ -43,5 +43,11 @@ public class PruebaEmpleado {
                 empleado2.obtenerPrimerNombre(), empleado2.obtenerApellidoPaterno(), anualConAumento2
         );
         JOptionPane.showMessageDialog(null, reporteFinal);
+
+        // Demostración de validación con salario negativo
+        Empleado empleadoInvalido = new Empleado("Prueba", "Negativo", -500.0);
+        JOptionPane.showMessageDialog(null,
+                "Prueba de validación (Salario inicial: -500.0):\n" +
+                        "Salario registrado: $" + empleadoInvalido.obtenerSalarioMensual());
     }
 }
